@@ -4,113 +4,366 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Netflix App Guide: Features, Android Setup &amp; Downloads | MovieNova</title>
-  <meta name="description" content="Read MovieNova's independent Netflix app guide covering key features, Android installation, offline viewing, compatibility checks, and safe official download options.">
+
+  <title>Netflix App Guide: Features, Android Setup &amp; Offline Viewing | MovieNova</title>
+
+  <meta name="description" content="Read MovieNova's independent Netflix app guide covering key features, Android installation, offline viewing, compatibility checks, and official app links.">
+
   <link rel="canonical" href="https://a02768378-eng.github.io/netflix.html">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#09090b">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="MovieNova home">
-      <span class="brand-mark">M</span><span>Movie<span class="red">Nova</span></span>
+      <span class="brand-mark">M</span>
+      <span>Movie<span class="red">Nova</span></span>
     </a>
-    <nav aria-label="Main navigation">
+
+    <button
+      class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="nav">
+      ☰
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="#features">Features</a>
-      <a href="#setup">Setup Guide</a>
-      <a href="#faq">FAQs</a>
+      <a href="apps.html">Apps</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="overview">
-      <p class="eyebrow">INDEPENDENT APP GUIDE</p>
-      <h1>Netflix App Guide: Features, Android Setup &amp; Offline Viewing</h1>
-      <p>Thinking about using Netflix on your phone or TV? This guide explains what the service offers, how to install its official app, and what to check before signing in or starting a membership.</p>
-      <p class="hero-actions">
-        <a class="button" href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient" target="_blank" rel="noopener noreferrer">Get Netflix on Google Play ↗</a>
-        <a class="button button-secondary" href="https://www.netflix.com/pk/" target="_blank" rel="noopener noreferrer">Visit Netflix Pakistan ↗</a>
-      </p>
-      <p class="notice">MovieNova is an independent information website. It is not owned by, sponsored by, or affiliated with Netflix.</p>
-    </section>
 
-    <section class="content-section" id="about">
-      <p class="eyebrow">01 / OVERVIEW</p>
-      <h2>What is Netflix?</h2>
-      <p>Netflix is a subscription streaming service with films, series, documentaries, anime, and other entertainment. You can watch on supported phones, tablets, computers, TVs, and streaming devices. The catalogue and available features can vary by country, plan, and device.</p>
-      <p>This page is an independent guide, not an official Netflix support page. For the latest availability, membership details, and account help, check Netflix directly.</p>
-    </section>
+    <!-- HERO SECTION -->
+    <section class="hero netflix-hero" id="overview">
 
-    <section class="content-section" id="features">
-      <p class="eyebrow">02 / FEATURES</p>
-      <h2>Useful Netflix features</h2>
-      <div class="feature-grid">
-        <article class="feature-card"><h3>Browse entertainment</h3><p>Search for titles or explore categories and recommendations in the app.</p></article>
-        <article class="feature-card"><h3>Profiles and controls</h3><p>Profiles help people in a household keep their viewing experiences separate. Parental controls can help adults manage what younger viewers can watch.</p></article>
-        <article class="feature-card"><h3>Offline downloads</h3><p>Some titles can be downloaded in the mobile app for offline viewing. Availability depends on the title, plan, and device; not every title can be downloaded.</p></article>
-        <article class="feature-card"><h3>Subtitles and audio</h3><p>Supported titles may offer subtitle and alternate-audio options. Available languages differ by title and region.</p></article>
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span class="pulse"></span>
+          INDEPENDENT APP GUIDE
+        </p>
+
+        <h1>
+          Netflix App Guide:
+          <span class="gradient-text">Features, Android Setup &amp; Offline Viewing</span>
+        </h1>
+
+        <p class="hero-lede">
+          Thinking about using Netflix on your phone or TV?
+          Explore its features, official installation steps,
+          offline viewing options, and important compatibility details.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="button button-red"
+            href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient"
+            target="_blank"
+            rel="noopener noreferrer">
+            Get Netflix on Google Play ↗
+          </a>
+
+          <a
+            class="button button-ghost"
+            href="https://www.netflix.com/pk/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Netflix Pakistan ↗
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <span><span class="proof-icon">✓</span> Official-source guidance</span>
+          <i></i>
+          <span>Android setup</span>
+          <i></i>
+          <span>Safety tips</span>
+        </div>
+
+        <p class="netflix-disclaimer">
+          MovieNova is an independent information website. It is not owned by,
+          sponsored by, or affiliated with Netflix.
+        </p>
+      </div>
+
+      <!-- DECORATIVE VISUAL -->
+      <div class="hero-art netflix-hero-art" aria-hidden="true">
+
+        <div class="orbit"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="netflix-glow"></div>
+
+        <div class="netflix-poster">
+          <span class="netflix-poster-label">MOVIENOVA GUIDE</span>
+
+          <div class="netflix-symbol">N</div>
+
+          <div class="netflix-poster-bottom">
+            <span>STREAMING</span>
+            <strong>MADE SIMPLE.</strong>
+            <small>EXPLORE • LEARN • DISCOVER</small>
+          </div>
+        </div>
+
+        <div class="floating-tag netflix-tag-top">
+          <span class="tag-dot"></span>
+          APP INFORMATION
+        </div>
+
+        <div class="floating-tag netflix-tag-bottom">
+          <span>✓</span>
+          <span>Official sources</span>
+        </div>
+
       </div>
     </section>
 
+    <!-- OVERVIEW -->
+    <section class="content-section" id="about">
+      <p class="eyebrow">01 / OVERVIEW</p>
+
+      <h2>What is Netflix?</h2>
+
+      <p>
+        Netflix is a subscription streaming service with films, series,
+        documentaries, anime, and other entertainment. You can watch on
+        supported phones, tablets, computers, TVs, and streaming devices.
+        The catalogue and available features can vary by country, plan,
+        and device.
+      </p>
+
+      <p>
+        This page is an independent guide, not an official Netflix support
+        page. For the latest availability, membership details, and account
+        help, check Netflix directly.
+      </p>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="content-section" id="features">
+      <p class="eyebrow">02 / FEATURES</p>
+
+      <h2>Useful Netflix features</h2>
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+          <div class="feature-icon">⌕</div>
+          <h3>Browse entertainment</h3>
+          <p>
+            Search for titles or explore categories and recommendations
+            in the app.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">◎</div>
+          <h3>Profiles and controls</h3>
+          <p>
+            Profiles help household members keep their viewing experiences
+            separate. Parental controls can help adults manage viewing.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">↓</div>
+          <h3>Offline downloads</h3>
+          <p>
+            Selected titles can be downloaded in supported mobile apps.
+            Availability depends on the title, plan, and device.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">CC</div>
+          <h3>Subtitles and audio</h3>
+          <p>
+            Supported titles may offer subtitles and alternate audio.
+            Available languages differ by title and region.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SETUP GUIDE -->
     <section class="content-section" id="setup">
       <p class="eyebrow">03 / ANDROID SETUP</p>
+
       <h2>How to install Netflix on Android</h2>
+
       <ol class="steps">
-        <li>Open the Google Play Store on your Android phone or tablet.</li>
-        <li>Search for <strong>Netflix</strong> and check that the publisher is Netflix, Inc.</li>
-        <li>Open the official listing and tap <strong>Install</strong>, if your device is compatible.</li>
-        <li>When installation finishes, open the app and sign in, or follow Netflix's official steps to create an account.</li>
+        <li>
+          <span>01</span>
+          <div>
+            <b>Open Google Play</b>
+            <p>Open the Play Store on your Android phone or tablet.</p>
+          </div>
+        </li>
+
+        <li>
+          <span>02</span>
+          <div>
+            <b>Find the official app</b>
+            <p>Search for Netflix and check that the publisher is Netflix, Inc.</p>
+          </div>
+        </li>
+
+        <li>
+          <span>03</span>
+          <div>
+            <b>Check compatibility</b>
+            <p>Open the official listing and check whether your device is supported.</p>
+          </div>
+        </li>
+
+        <li>
+          <span>04</span>
+          <div>
+            <b>Install and sign in</b>
+            <p>Install the app, open it, and follow Netflix's official account instructions.</p>
+          </div>
+        </li>
       </ol>
-      <p>Netflix's published help guidance says the latest app generally requires Android 9 or later, though device support can vary. If the app does not appear in your store, check Netflix's current help page and your device's compatibility.</p>
-      <p><a href="https://help.netflix.com/en/node/23939" target="_blank" rel="noopener noreferrer">Read Netflix's official Android setup instructions ↗</a></p>
+
+      <p>
+        Device and operating-system requirements can change. Check Netflix's
+        official help page for current Android installation guidance.
+      </p>
+
+      <p>
+        <a href="https://help.netflix.com/en/node/23939"
+           target="_blank"
+           rel="noopener noreferrer">
+          Read Netflix's official Android setup instructions ↗
+        </a>
+      </p>
     </section>
 
+    <!-- OFFLINE VIEWING -->
     <section class="content-section" id="downloads">
       <p class="eyebrow">04 / OFFLINE VIEWING</p>
+
       <h2>Can you download movies in Netflix?</h2>
-      <p>Netflix allows downloads of selected films and episodes through its supported mobile apps. Open a title and look for the download icon. If there is no download option, that title or device may not support downloads.</p>
-      <p>For safety, install the app from an official app store rather than unknown APK websites. Avoid sites that promise free access to paid content or ask you to install extra files.</p>
-      <p><a href="https://help.netflix.com/en/node/54816" target="_blank" rel="noopener noreferrer">Check Netflix's official download help ↗</a></p>
+
+      <p>
+        Netflix allows downloads of selected films and episodes through
+        supported mobile apps. Open a title and look for the download icon.
+        Not every title or device supports downloads.
+      </p>
+
+      <p>
+        For safety, install the app through an official app store rather
+        than unknown APK websites. Avoid websites that promise free access
+        to paid content or ask you to install unfamiliar files.
+      </p>
+
+      <p>
+        <a href="https://help.netflix.com/en/node/54816"
+           target="_blank"
+           rel="noopener noreferrer">
+          Check Netflix's official download help ↗
+        </a>
+      </p>
     </section>
 
+    <!-- MEMBERSHIP -->
     <section class="content-section" id="cost">
       <p class="eyebrow">05 / MEMBERSHIP</p>
+
       <h2>Is Netflix free?</h2>
-      <p>Netflix is a paid membership service. Plans, prices, payment methods, and features can change, so check the official Netflix Pakistan website for current details before subscribing. MovieNova does not process subscriptions or payments.</p>
-      <p><a href="https://www.netflix.com/pk/" target="_blank" rel="noopener noreferrer">View current information on Netflix Pakistan ↗</a></p>
+
+      <p>
+        Netflix is a paid membership service. Plans, prices, payment methods,
+        and features can change. Check the official Netflix Pakistan website
+        for current details before subscribing.
+      </p>
+
+      <p>
+        <a href="https://www.netflix.com/pk/"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Netflix Pakistan ↗
+        </a>
+      </p>
     </section>
 
+    <!-- SAFETY -->
     <section class="content-section" id="safety">
       <p class="eyebrow">06 / SAFETY CHECKLIST</p>
+
       <h2>Before you install</h2>
+
       <ul>
-        <li>Check the app publisher and use an official app store.</li>
-        <li>Review app permissions and keep your device software updated.</li>
-        <li>Never share your password or payment details on unfamiliar websites.</li>
+        <li>Check the publisher and use an official app store.</li>
+        <li>Review app permissions and update your device software.</li>
+        <li>Never share passwords or payment details on unfamiliar websites.</li>
         <li>Confirm current membership pricing on Netflix's official website.</li>
       </ul>
     </section>
 
+    <!-- FAQ -->
     <section class="content-section" id="faq">
       <p class="eyebrow">07 / FAQ</p>
+
       <h2>Frequently asked questions</h2>
-      <details><summary>Is MovieNova the official Netflix website?</summary><p>No. MovieNova is an independent guide and is not affiliated with Netflix.</p></details>
-      <details><summary>Where should I install the Netflix Android app?</summary><p>Use the official Google Play listing when it is available and compatible with your device.</p></details>
-      <details><summary>Can every Netflix title be downloaded?</summary><p>No. Downloads are available only for selected titles and supported devices. Check the download icon and Netflix's official help guidance.</p></details>
-      <details><summary>Does Netflix require a subscription?</summary><p>Yes, Netflix is a paid membership service. Check Netflix Pakistan for current plans and prices.</p></details>
-      <details><summary>Why can't I find Netflix in the Play Store?</summary><p>Availability may depend on device compatibility, operating system version, and region. Review Netflix's official help instructions rather than installing an APK from an unknown source.</p></details>
+
+      <details>
+        <summary>Is MovieNova the official Netflix website?</summary>
+        <p>No. MovieNova is an independent guide and is not affiliated with Netflix.</p>
+      </details>
+
+      <details>
+        <summary>Where should I install the Netflix Android app?</summary>
+        <p>Use the official Google Play listing when it is available and compatible with your device.</p>
+      </details>
+
+      <details>
+        <summary>Can every Netflix title be downloaded?</summary>
+        <p>No. Downloads are available only for selected titles and supported devices.</p>
+      </details>
+
+      <details>
+        <summary>Does Netflix require a subscription?</summary>
+        <p>Yes. Netflix is a paid membership service. Check Netflix Pakistan for current plans and prices.</p>
+      </details>
+
+      <details>
+        <summary>Why can't I find Netflix in the Play Store?</summary>
+        <p>Availability may depend on device compatibility, operating-system version, and region. Check Netflix's official help instructions.</p>
+      </details>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <a class="brand footer-brand" href="index.html"><span class="brand-mark">M</span><span>Movie<span class="red">Nova</span></span></a>
-    <p>Independent app information and guides. Not affiliated with third-party app developers.</p>
+    <a class="brand footer-brand" href="index.html" aria-label="MovieNova home">
+      <span class="brand-mark">M</span>
+      <span>Movie<span class="red">Nova</span></span>
+    </a>
+
+    <p>
+      Independent app information and guides.
+      Not affiliated with third-party app developers.
+    </p>
+
     <div class="footer-links">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a>
+      <a href="apps.html">Apps</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
     </div>
+
     <small>© <span id="year"></span> MovieNova. All rights reserved.</small>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
