@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <title>Amazon Prime Video App Guide: Features, Android Setup &amp; Offline Viewing | MovieNova</title>
+
+  <meta name="description" content="Learn about Amazon Prime Video features, Android installation, offline viewing, device compatibility, and safe official app sources with this independent MovieNova guide.">
+
+  <link rel="canonical" href="https://a02768378-eng.github.io/prime-video.html">
+  <meta name="theme-color" content="#09090b">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Prime Video article styling */
+    .pv-hero {
+      max-width: 1160px;
+      margin: auto;
+      padding: 65px 24px 60px;
+      min-height: 520px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 45px;
+      overflow: hidden;
+    }
+
+    .pv-hero-copy {
+      min-width: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pv-hero h1 {
+      font-family: Manrope, sans-serif;
+      font-size: clamp(38px, 4.4vw, 58px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin: 0 0 22px;
+    }
+
+    .pv-gradient {
+      color: #ff5368;
+    }
+
+    .pv-intro {
+      color: #aaaab4;
+      font-size: 14px;
+      line-height: 1.9;
+      max-width: 550px;
+      margin-bottom: 25px;
+    }
+
+    .pv-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .pv-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 16px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .pv-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .pv-button-primary {
+      color: white;
+      background: #f12b42;
+    }
+
+    .pv-button-primary:hover {
+      background: #ff4055;
+    }
+
+    .pv-button-secondary {
+      color: #f7f7f8;
+      border: 1px solid #393940;
+    }
+
+    .pv-disclaimer {
+      color: #85858f;
+      font-size: 10px;
+      line-height: 1.8;
+      max-width: 480px;
+      margin: 20px 0 0;
+    }
+
+    .pv-art {
+      min-width: 0;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .pv-art-glow {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: #20a5ec;
+      opacity: .12;
+      filter: blur(90px);
+    }
+
+    .pv-orbit {
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+
+    .pv-orbit-inner {
+      width: 255px;
+      height: 255px;
+      border-color: rgba(31,166,238,.18);
+    }
+
+    .pv-poster {
+      width: 245px;
+      height: 320px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 18px;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 38%, #12334b 0%, transparent 58%),
+        linear-gradient(145deg, #142c3b, #101116 70%);
+      box-shadow: 0 25px 75px rgba(0,0,0,.45);
+      transform: rotate(3deg);
+    }
+
+    .pv-poster::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-top: 3px solid #26a8ef;
+      pointer-events: none;
+    }
+
+    .pv-poster-label {
+      color: #c3d5e0;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .pv-symbol {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #28a8ee;
+      font-family: Manrope, sans-serif;
+      font-weight: 800;
+      font-size: 95px;
+      letter-spacing: -7px;
+      text-shadow: 0 10px 45px rgba(40,168,238,.28);
+    }
+
+    .pv-poster-bottom {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pv-poster-bottom span {
+      display: block;
+      color: #b4c3cc;
+      font-size: 9px;
+      letter-spacing: 3px;
+      margin-bottom: 7px;
+    }
+
+    .pv-poster-bottom strong {
+      display: block;
+      color: white;
+      font-family: Manrope, sans-serif;
+      font-size: 24px;
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    .pv-poster-bottom small {
+      display: block;
+      color: #9aabb7;
+      font-size: 7px;
+      letter-spacing: 1.3px;
+      margin-top: 12px;
+    }
+
+    .pv-float {
+      position: absolute;
+      z-index: 2;
+      padding: 11px 13px;
+      background: #202025;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 9px;
+      color: #e8e8eb;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      box-shadow: 0 12px 30px #0008;
+    }
+
+    .pv-float-top {
+      top: 30px;
+      right: -3px;
+    }
+
+    .pv-float-bottom {
+      bottom: 25px;
+      left: 0;
+      color: #65c7ff;
+    }
+
+    .pv-article {
+      max-width: 1160px;
+      margin: auto;
+      padding: 10px 24px 75px;
+    }
+
+    .pv-section {
+      padding: 48px 0;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      scroll-margin-top: 25px;
+    }
+
+    .pv-section h2 {
+      font-family: Manrope, sans-serif;
+      font-size: clamp(28px, 3.5vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -1.4px;
+      margin: 0 0 20px;
+    }
+
+    .pv-section h3 {
+      font-family: Manrope, sans-serif;
+      font-size: 17px;
+      margin: 0 0 10px;
+    }
+
+    .pv-section p,
+    .pv-section li {
+      color: #b0b0ba;
+      font-size: 13px;
+      line-height: 1.95;
+    }
+
+    .pv-section p {
+      max-width: 850px;
+      margin-bottom: 16px;
+    }
+
+    .pv-section a:not(.pv-card-link) {
+      color: #ff6877;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .pv-label {
+      color: #ff6877 !important;
+      font-size: 10px !important;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 13px !important;
+    }
+
+    .pv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 25px;
+    }
+
+    .pv-card {
+      padding: 24px;
+      background: linear-gradient(145deg, #151519, #0e0e10);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 13px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .pv-card:hover {
+      border-color: rgba(40,168,238,.45);
+      transform: translateY(-3px);
+    }
+
+    .pv-card-number {
+      display: inline-block;
+      color: #4dbdff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .pv-card p {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+
+    .pv-callout {
+      padding: 22px 24px;
+      margin-top: 22px;
+      background: rgba(40,168,238,.06);
+      border-left: 3px solid #28a8ee;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .pv-callout p {
+      margin: 0;
+    }
+
+    .pv-steps {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0;
+      max-width: 850px;
+    }
+
+    .pv-steps li {
+      display: flex;
+      gap: 17px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .pv-step-number {
+      flex: 0 0 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      color: #65c7ff;
+      background: rgba(40,168,238,.1);
+      border: 1px solid rgba(40,168,238,.2);
+      border-radius: 9px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .pv-steps strong {
+      display: block;
+      color: #f7f7f8;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .pv-steps p {
+      margin: 0;
+    }
+
+    .pv-checklist {
+      padding-left: 20px;
+      max-width: 850px;
+    }
+
+    .pv-checklist li {
+      padding: 5px 0;
+    }
+
+    .pv-faq {
+      max-width: 900px;
+      margin-top: 22px;
+    }
+
+    .pv-faq details {
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      padding: 19px 0;
+    }
+
+    .pv-faq summary {
+      cursor: pointer;
+      color: #f7f7f8;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .pv-faq details p {
+      margin: 12px 0 0;
+    }
+
+    .pv-related {
+      margin-top: 30px;
+      padding: 25px;
+      background: #121216;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 12px;
+    }
+
+    .pv-related h3 {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .pv-hero {
+        grid-template-columns: 1fr .8fr;
+        gap: 20px;
+        padding-top: 50px;
+      }
+
+      .pv-hero h1 {
+        font-size: clamp(34px, 5vw, 45px);
+      }
+
+      .pv-poster {
+        width: 210px;
+        height: 290px;
+      }
+
+      .pv-orbit {
+        width: 280px;
+        height: 280px;
+      }
+
+      .pv-orbit-inner {
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .pv-hero {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 45px 22px 35px;
+      }
+
+      .pv-hero h1 {
+        font-size: clamp(36px, 9vw, 47px);
+        letter-spacing: -1.5px;
+      }
+
+      .pv-intro {
+        font-size: 13px;
+      }
+
+      .pv-actions {
+        flex-direction: column;
+      }
+
+      .pv-button {
+        width: 100%;
+        min-height: 45px;
+      }
+
+      .pv-art {
+        min-height: 340px;
+        margin-top: 10px;
+      }
+
+      .pv-poster {
+        width: 220px;
+        height: 285px;
+      }
+
+      .pv-float-top {
+        right: 0;
+      }
+
+      .pv-float-bottom {
+        left: 0;
+      }
+
+      .pv-article {
+        padding: 0 22px 50px;
+      }
+
+      .pv-section {
+        padding: 36px 0;
+      }
+
+      .pv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pv-card {
+        padding: 21px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .pv-hero {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+
+      .pv-hero h1 {
+        font-size: 34px;
+      }
+
+      .pv-article {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SHARED HEADER -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="MovieNova home">
+      <span class="brand-mark">M</span>
+      <span>Movie<span class="red">Nova</span></span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="nav">
+      ☰
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="pv-hero" id="overview">
+
+      <div class="pv-hero-copy">
+        <p class="eyebrow">
+          <span class="pulse"></span>
+          INDEPENDENT APP GUIDE
+        </p>
+
+        <h1>
+          Amazon Prime Video:
+          <span class="pv-gradient">Features, Android Setup &amp; Offline Viewing</span>
+        </h1>
+
+        <p class="pv-intro">
+          Thinking about using Prime Video on your phone, computer, or TV?
+          This guide walks through the app's main features, installation
+          process, offline viewing options, and a few things worth checking
+          before you subscribe or rent a title.
+        </p>
+
+        <div class="pv-actions">
+          <a
+            class="pv-button pv-button-primary"
+            href="https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient"
+            target="_blank"
+            rel="noopener noreferrer">
+            Get Prime Video ↗
+          </a>
+
+          <a
+            class="pv-button pv-button-secondary"
+            href="https://www.primevideo.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit Prime Video ↗
+          </a>
+        </div>
+
+        <p class="pv-disclaimer">
+          MovieNova is an independent information website. It is not owned
+          by, sponsored by, or affiliated with Amazon or Prime Video.
+          Product names and trademarks belong to their respective owners.
+        </p>
+      </div>
+
+      <div class="pv-art" aria-hidden="true">
+        <div class="pv-art-glow"></div>
+        <div class="pv-orbit"></div>
+        <div class="pv-orbit pv-orbit-inner"></div>
+
+        <div class="pv-poster">
+          <span class="pv-poster-label">MOVIENOVA APP GUIDE</span>
+
+          <div class="pv-symbol">›</div>
+
+          <div class="pv-poster-bottom">
+            <span>STREAMING GUIDE</span>
+            <strong>WATCH YOUR WAY.</strong>
+            <small>FEATURES • SETUP • SAFETY</small>
+          </div>
+        </div>
+
+        <div class="pv-float pv-float-top">APP INFORMATION</div>
+        <div class="pv-float pv-float-bottom">✓ Official-source guidance</div>
+      </div>
+
+    </section>
+
+    <article class="pv-article">
+
+      <!-- INTRODUCTION -->
+      <section class="pv-section" id="about">
+        <p class="pv-label">01 / INTRODUCTION</p>
+
+        <h2>What Is Amazon Prime Video?</h2>
+
+        <p>
+          Amazon Prime Video is a streaming service that offers films,
+          television series, and other video content. Depending on the
+          country and the title, viewers may find content included with
+          a subscription as well as movies and shows available to rent
+          or buy separately.
+        </p>
+
+        <p>
+          The service is available on a range of supported devices,
+          including mobile phones, tablets, computers, selected smart TVs,
+          and streaming devices. The experience is not identical everywhere:
+          the catalogue, payment options, and available features can vary
+          by region and device.
+        </p>
+
+        <p>
+          This guide focuses on the app itself, how to find the official
+          version, and what to understand before using its streaming or
+          download features.
+        </p>
+
+        <div class="pv-callout">
+          <p>
+            <strong>Good to know:</strong> Having the app installed does not
+            automatically mean every movie or channel is included in your
+            membership. Check the details shown on each title before paying.
+          </p>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="pv-section" id="features">
+        <p class="pv-label">02 / FEATURES</p>
+
+        <h2>Prime Video Features Worth Knowing</h2>
+
+        <p>
+          The app combines a searchable entertainment catalogue with
+          playback and account tools. The exact options you see may depend
+          on your device, region, membership, and the title you're watching.
+        </p>
+
+        <div class="pv-grid">
+
+          <div class="pv-card">
+            <span class="pv-card-number">FEATURE 01</span>
+            <h3>Browse and discover</h3>
+            <p>
+              Search for a particular film or series, explore recommendations,
+              and review a title's details before deciding what to watch.
+            </p>
+          </div>
+
+          <div class="pv-card">
+            <span class="pv-card-number">FEATURE 02</span>
+            <h3>Profiles</h3>
+            <p>
+              Supported versions of Prime Video offer profiles so people
+              can maintain separate viewing preferences. Available profile
+              controls may differ across devices.
+            </p>
+          </div>
+
+          <div class="pv-card">
+            <span class="pv-card-number">FEATURE 03</span>
+            <h3>Offline downloads</h3>
+            <p>
+              Selected titles can be downloaded in supported apps for
+              temporary offline viewing. A download option is not available
+              for every title.
+            </p>
+          </div>
+
+          <div class="pv-card">
+            <span class="pv-card-number">FEATURE 04</span>
+            <h3>Subtitles and audio</h3>
+            <p>
+              Supported content may offer subtitles, alternate audio,
+              or audio descriptions. The available options depend on
+              the title and device.
+            </p>
+          </div>
+
+          <div class="pv-card">
+            <span class="pv-card-number">FEATURE 05</span>
+            <h3>Rent and buy options</h3>
+            <p>
+              Some titles may be offered for separate rental or purchase.
+              Review the price and viewing terms on the title page before
+              confirming a transaction.
+            </p>
+          </div>
+
+          <div class="pv-card">
+            <span class="pv-card-number">FEATURE 06</span>
+            <h3>Multiple devices</h3>
+            <p>
+              Prime Video supports a variety of compatible devices.
+              Playback quality and other features can differ depending
+              on the hardware and connection.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ANDROID SETUP -->
+      <section class="pv-section" id="setup">
+        <p class="pv-label">03 / ANDROID SETUP</p>
+
+        <h2>How to Install Prime Video on Android</h2>
+
+        <p>
+          Installing the official app is straightforward. Using the
+          Google Play Store also makes it easier to identify the publisher
+          and receive supported app updates.
+        </p>
+
+        <ol class="pv-steps">
+
+          <li>
+            <span class="pv-step-number">01</span>
+            <div>
+              <strong>Open Google Play Store</strong>
+              <p>
+                Open the Play Store on your Android phone or tablet and
+                make sure your internet connection is working.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="pv-step-number">02</span>
+            <div>
+              <strong>Find the official app</strong>
+              <p>
+                Search for Prime Video and check the app listing and
+                publisher details before continuing.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="pv-step-number">03</span>
+            <div>
+              <strong>Check compatibility</strong>
+              <p>
+                Review the listing to confirm that the app is available
+                for your device and Android version.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="pv-step-number">04</span>
+            <div>
+              <strong>Install and open the app</strong>
+              <p>
+                Tap Install, wait for the installation to finish, and
+                open Prime Video.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="pv-step-number">05</span>
+            <div>
+              <strong>Sign in and review membership details</strong>
+              <p>
+                Follow the app's account instructions. Before subscribing,
+                renting, or buying anything, check the price and terms
+                displayed for your region.
+              </p>
+            </div>
+          </li>
+
+        </ol>
+
+        <p>
+          If the app does not appear in your store, check device
+          compatibility and official support information. Avoid installing
+          unfamiliar files from third-party download sites.
+        </p>
+
+        <p>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.amazon.avod.thirdpartyclient"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Prime Video on Google Play ↗
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://www.primevideo.com/help/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit Prime Video official help ↗
+          </a>
+        </p>
+      </section>
+
+      <!-- OFFLINE VIEWING -->
+      <section class="pv-section" id="downloads">
+        <p class="pv-label">04 / OFFLINE VIEWING</p>
+
+        <h2>How Does Prime Video Offline Viewing Work?</h2>
+
+        <p>
+          Offline downloads can be useful when you expect to be without
+          a reliable internet connection. On supported devices, Prime
+          Video lets you download eligible films and television episodes
+          through the official app.
+        </p>
+
+        <p>
+          To check whether a title is available, open its details page
+          in the app and look for the download option. For television
+          series, download options may appear for a season or individual
+          episodes.
+        </p>
+
+        <p>
+          Keep in mind that not every title can be downloaded. Viewing
+          periods and other restrictions can also apply, so downloaded
+          content should be treated as temporary offline access rather
+          than a permanent copy.
+        </p>
+
+        <div class="pv-callout">
+          <p>
+            <strong>Before travelling:</strong> Download eligible titles
+            over a reliable connection and check the app's download
+            information. Do not assume that every film or episode will
+            remain available offline indefinitely.
+          </p>
+        </div>
+
+        <p>
+          <a
+            href="https://www.primevideo.com/help?nodeId=GMF637NHNEF9D8GT"
+            target="_blank"
+            rel="noopener noreferrer">
+            Read the official Prime Video download guide ↗
+          </a>
+        </p>
+      </section>
+
+      <!-- MEMBERSHIP -->
+      <section class="pv-section" id="membership">
+        <p class="pv-label">05 / MEMBERSHIP AND COST</p>
+
+        <h2>Is Prime Video Free?</h2>
+
+        <p>
+          Prime Video is not universally free. Depending on the market
+          and offer, access may require an eligible subscription, while
+          some titles can have separate rental, purchase, or add-on
+          charges.
+        </p>
+
+        <p>
+          A subscription also does not guarantee that every title or
+          third-party channel is included. Check the information shown
+          on the official service for your country before signing up
+          or making a payment.
+        </p>
+
+        <p>
+          MovieNova does not sell memberships, collect subscription
+          payments, or provide access to paid content.
+        </p>
+
+        <p>
+          <a
+            href="https://www.primevideo.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Check official Prime Video information ↗
+          </a>
+        </p>
+      </section>
+
+      <!-- COMPATIBILITY -->
+      <section class="pv-section" id="compatibility">
+        <p class="pv-label">06 / DEVICE COMPATIBILITY</p>
+
+        <h2>Which Devices Support Prime Video?</h2>
+
+        <p>
+          Prime Video is available on a range of devices, including
+          supported Android and iOS mobile devices, computers, selected
+          smart TVs, and compatible streaming equipment.
+        </p>
+
+        <p>
+          However, support is not identical across every model. Video
+          quality, audio options, profiles, and download functionality
+          can depend on the device and the app version.
+        </p>
+
+        <p>
+          If a feature is missing, first check whether your device is
+          supported and whether the app needs an update. The official
+          support pages provide the most reliable information about
+          current device requirements.
+        </p>
+
+        <p>
+          <a
+            href="https://www.primevideo.com/help?nodeId=G97NYNWZ7BB9CNDW"
+            target="_blank"
+            rel="noopener noreferrer">
+            Review Prime Video mobile-device support ↗
+          </a>
+        </p>
+      </section>
+
+      <!-- SAFETY -->
+      <section class="pv-section" id="safety">
+        <p class="pv-label">07 / SAFETY CHECKLIST</p>
+
+        <h2>Things to Check Before Using the App</h2>
+
+        <p>
+          A few simple checks can help you avoid misleading listings,
+          unexpected charges, and unnecessary security risks.
+        </p>
+
+        <ul class="pv-checklist">
+          <li>Use an official app store or the service's official website.</li>
+          <li>Check the publisher before installing an application.</li>
+          <li>Review subscription, rental, and purchase prices before confirming payment.</li>
+          <li>Keep your app and device software updated.</li>
+          <li>Use a strong, unique password for your account.</li>
+          <li>Never share verification codes or account details with strangers.</li>
+          <li>Avoid unofficial APK files and websites promising unauthorised free access.</li>
+        </ul>
+
+        <div class="pv-callout">
+          <p>
+            <strong>Remember:</strong> MovieNova is an independent
+            information website. Always use official sources for app
+            installation, account support, and membership information.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="pv-section" id="faq">
+        <p class="pv-label">08 / FREQUENTLY ASKED QUESTIONS</p>
+
+        <h2>Prime Video FAQs</h2>
+
+        <div class="pv-faq">
+
+          <details>
+            <summary>Is Prime Video the same as Amazon Prime?</summary>
+            <p>
+              Prime Video is Amazon's video streaming service. How it
+              relates to an Amazon Prime membership depends on the
+              country and the available subscription options. Check
+              the official terms for your region.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I watch Prime Video offline?</summary>
+            <p>
+              Selected titles can be downloaded through supported apps
+              and devices. Download availability and viewing restrictions
+              vary by title and subscription.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I download every movie?</summary>
+            <p>
+              No. The download option is available only for eligible
+              titles. Check the title details in the official app.
+            </p>
+          </details>
+
+          <details>
+            <summary>Why is a movie asking for an additional payment?</summary>
+            <p>
+              Some titles may be offered separately for rental or
+              purchase, or through an additional channel subscription.
+              Review the price and terms before confirming.
+            </p>
+          </details>
+
+          <details>
+            <summary>Why is Prime Video unavailable on my device?</summary>
+            <p>
+              Availability can depend on your device, software version,
+              and region. Check the official compatibility information
+              and update the app if an update is available.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is MovieNova an official Amazon website?</summary>
+            <p>
+              No. MovieNova is an independent information website and
+              is not affiliated with Amazon or Prime Video.
+            </p>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- RELATED ARTICLE -->
+      <section class="pv-related">
+        <p class="pv-label">KEEP EXPLORING</p>
+        <h3>Explore More App Guides</h3>
+        <p>
+          Read our independent guides for app features, installation
+          information, and safe ways to find official sources.
+        </p>
+        <a class="pv-button pv-button-primary" href="apps.html">
+          Browse All App Guides →
+        </a>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- SHARED FOOTER -->
+  <footer>
+    <a class="brand footer-brand" href="index.html" aria-label="MovieNova home">
+      <span class="brand-mark">M</span>
+      <span>Movie<span class="red">Nova</span></span>
+    </a>
+
+    <p>
+      Independent app information and guides.
+      Not affiliated with third-party app developers.
+    </p>
+
+    <div class="footer-links">
+      <a href="apps.html">Apps</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+
+    <small>© <span id="year"></span> MovieNova. All rights reserved.</small>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
