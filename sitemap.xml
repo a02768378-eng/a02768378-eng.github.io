@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://a02768378-eng.github.io/</loc>
   </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/apps.html</loc>
+  </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/privacy-policy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/netflix.html</loc>
+  </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/prime-video.html</loc>
+  </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/disney-plus.html</loc>
+  </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/spotify.html</loc>
+  </url>
+
+  <url>
+    <loc>https://a02768378-eng.github.io/youtube.html</loc>
+  </url>
+
 </urlset>
