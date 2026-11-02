@@ -1,0 +1,700 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VLC Media Player Guide: Features, Compatibility & Setup | MovieNova</title>
+
+  <meta name="description" content="Explore VLC Media Player features, supported formats, subtitles, device compatibility, setup guidance and common troubleshooting tips.">
+
+  <meta name="keywords" content="VLC Media Player, VLC features, VLC Android, VLC for Windows, VLC subtitles, VLC media player guide">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://a02768378-eng.github.io/vlc.html">
+
+  <meta name="theme-color" content="#0b0b0d">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0b0b0d;
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: #ff4545;
+      text-decoration: none;
+    }
+
+    .topbar {
+      background: #151518;
+      border-bottom: 1px solid #29292d;
+      padding: 15px 6%;
+      text-align: center;
+      color: #aaa;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    header {
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      border-bottom: 1px solid #252529;
+    }
+
+    .logo {
+      color: white;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #ff4242;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: #ddd;
+    }
+
+    .hero {
+      padding: 75px 7%;
+      background:
+        radial-gradient(circle at 85% 30%, #401616 0, transparent 35%),
+        linear-gradient(135deg, #171719, #0b0b0d);
+      border-bottom: 1px solid #29292d;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #ff5555;
+      border: 1px solid #783030;
+      padding: 6px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 5vw, 58px);
+      line-height: 1.15;
+      max-width: 850px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #c3c3c8;
+      max-width: 760px;
+      font-size: 17px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: #e63737;
+      color: white;
+      padding: 12px 23px;
+      border-radius: 6px;
+      margin-top: 25px;
+      font-weight: bold;
+    }
+
+    .container {
+      width: min(1050px, 88%);
+      margin: auto;
+    }
+
+    .content {
+      padding: 55px 0;
+    }
+
+    .section {
+      margin-bottom: 42px;
+      padding: 28px;
+      background: #141417;
+      border: 1px solid #29292e;
+      border-radius: 12px;
+    }
+
+    h2 {
+      color: white;
+      font-size: 27px;
+      margin-bottom: 17px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 3px;
+      background: #e83d3d;
+      margin-top: 9px;
+      border-radius: 5px;
+    }
+
+    h3 {
+      color: #ff6666;
+      font-size: 19px;
+      margin: 23px 0 8px;
+    }
+
+    p {
+      color: #c8c8ce;
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      color: #c8c8ce;
+      padding-left: 24px;
+      margin: 12px 0;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 22px;
+    }
+
+    .feature-card {
+      background: #1c1c20;
+      border: 1px solid #34343a;
+      padding: 20px;
+      border-radius: 9px;
+      transition: .25s;
+    }
+
+    .feature-card:hover {
+      border-color: #ef4444;
+      transform: translateY(-3px);
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+    }
+
+    .info-table td {
+      padding: 13px;
+      border: 1px solid #35353a;
+      color: #ccc;
+    }
+
+    .info-table td:first-child {
+      color: white;
+      font-weight: bold;
+      width: 35%;
+    }
+
+    .notice {
+      background: #241719;
+      border-left: 4px solid #ed4444;
+      padding: 17px;
+      border-radius: 5px;
+      color: #ddd;
+      margin-top: 20px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #333;
+      padding: 17px 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+    }
+
+    .sources {
+      font-size: 14px;
+    }
+
+    footer {
+      background: #141417;
+      border-top: 1px solid #29292d;
+      padding: 30px 6%;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+    }
+
+    @media(max-width: 650px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .hero {
+        padding: 55px 6%;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 21px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+
+      .info-table td {
+        padding: 10px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    MOVIENOVA • APP INFORMATION & GUIDES
+  </div>
+
+  <header>
+    <a class="logo" href="index.html">Movie<span>Nova</span></a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <span class="tag">MEDIA PLAYER GUIDE</span>
+
+    <h1>VLC Media Player: Features, Compatibility & Complete Guide</h1>
+
+    <p>
+      Learn about VLC Media Player, its multimedia features,
+      supported formats, subtitle options, device compatibility
+      and useful setup information in this independent guide.
+    </p>
+
+    <a href="#overview" class="hero-btn">Explore VLC Guide</a>
+  </section>
+
+  <main class="container content">
+
+    <section class="section" id="overview">
+      <h2>What Is VLC Media Player?</h2>
+
+      <p>
+        VLC Media Player is a free and open-source multimedia
+        player developed by the VideoLAN project. It is designed
+        to play a wide range of audio and video files across
+        supported devices and operating systems.
+      </p>
+
+      <p>
+        VLC supports local media files, discs, network streams
+        and several multimedia formats. Its features include
+        subtitle controls, audio adjustments, video filters
+        and hardware decoding on supported platforms.
+      </p>
+
+      <table class="info-table">
+        <tr>
+          <td>Application</td>
+          <td>VLC Media Player</td>
+        </tr>
+        <tr>
+          <td>Developer Project</td>
+          <td>VideoLAN</td>
+        </tr>
+        <tr>
+          <td>License</td>
+          <td>Free and Open Source</td>
+        </tr>
+        <tr>
+          <td>Platforms</td>
+          <td>Windows, macOS, Linux, Android and iOS</td>
+        </tr>
+        <tr>
+          <td>Main Purpose</td>
+          <td>Audio and video playback</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Key Features of VLC Media Player</h2>
+
+      <p>
+        VLC includes several playback tools that make it useful
+        for everyday multimedia playback.
+      </p>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <h3>Wide Format Support</h3>
+          <p>
+            VLC supports many common audio and video formats,
+            including MP4, MKV, AVI, MP3 and FLAC.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Subtitle Controls</h3>
+          <p>
+            Users can load supported subtitle files and adjust
+            subtitle timing when needed.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Audio Equalizer</h3>
+          <p>
+            Audio settings and equalizer options help users
+            adjust sound playback.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Hardware Decoding</h3>
+          <p>
+            Supported devices can use hardware decoding to
+            improve media playback performance.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Network Streams</h3>
+          <p>
+            VLC supports various network streaming protocols
+            and compatible network media sources.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Video and Audio Filters</h3>
+          <p>
+            Playback filters provide additional ways to adjust
+            supported audio and video content.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Supported Media Formats</h2>
+
+      <p>
+        VLC supports a broad selection of multimedia formats.
+        Actual playback can depend on the platform, file condition
+        and available decoding support.
+      </p>
+
+      <h3>Video Formats</h3>
+      <p>
+        Examples include MP4, MKV, AVI, MOV, WebM, WMV,
+        MPEG and several other formats.
+      </p>
+
+      <h3>Audio Formats</h3>
+      <p>
+        Examples include MP3, AAC, FLAC, WAV, OGG,
+        WMA and other audio formats.
+      </p>
+
+      <h3>Subtitle Formats</h3>
+      <p>
+        VLC supports subtitle formats such as SRT, ASS,
+        SubViewer, MicroDVD and other supported subtitle types.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>VLC Device Compatibility</h2>
+
+      <p>
+        VLC is available across multiple desktop and mobile
+        platforms. The exact requirements depend on the
+        version and device.
+      </p>
+
+      <table class="info-table">
+        <tr>
+          <td>Windows</td>
+          <td>Desktop and supported Windows versions</td>
+        </tr>
+        <tr>
+          <td>macOS</td>
+          <td>Compatible Mac computers</td>
+        </tr>
+        <tr>
+          <td>Linux</td>
+          <td>Supported Linux distributions</td>
+        </tr>
+        <tr>
+          <td>Android</td>
+          <td>Android phones, tablets and supported TV devices</td>
+        </tr>
+        <tr>
+          <td>iOS</td>
+          <td>Supported iPhone and iPad devices</td>
+        </tr>
+      </table>
+
+      <div class="notice">
+        Always check the official VideoLAN download page
+        for the requirements of the version you plan to use.
+      </div>
+    </section>
+
+    <section class="section" id="guide">
+      <h2>How to Install VLC Media Player</h2>
+
+      <h3>For Desktop Users</h3>
+      <ol>
+        <li>Visit the official VideoLAN website.</li>
+        <li>Select the download option for your operating system.</li>
+        <li>Download the compatible installer.</li>
+        <li>Open the installer and follow its setup instructions.</li>
+        <li>Launch VLC after installation is complete.</li>
+      </ol>
+
+      <h3>For Android and iOS Users</h3>
+      <ol>
+        <li>Open your device's official app store.</li>
+        <li>Search for VLC Media Player.</li>
+        <li>Check that the publisher is VideoLAN.</li>
+        <li>Install the app using the store's instructions.</li>
+        <li>Open VLC and review its available settings.</li>
+      </ol>
+
+      <p>
+        Official website:
+        <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">
+          VideoLAN VLC Media Player
+        </a>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>How to Use Subtitles in VLC</h2>
+
+      <p>
+        VLC supports embedded subtitles as well as compatible
+        external subtitle files.
+      </p>
+
+      <ol>
+        <li>Open a media file in VLC.</li>
+        <li>Find the Subtitle menu or subtitle track controls.</li>
+        <li>Select an available subtitle track.</li>
+        <li>For an external file, use the option to add or load subtitles.</li>
+        <li>Adjust subtitle timing if it does not match the video.</li>
+      </ol>
+
+      <p>
+        Menu names and controls may differ between desktop
+        and mobile versions.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Common VLC Problems and Solutions</h2>
+
+      <h3>Video Is Not Playing</h3>
+      <p>
+        Check whether the file is complete and supported.
+        Try another compatible media file and make sure
+        VLC is updated.
+      </p>
+
+      <h3>No Audio During Playback</h3>
+      <p>
+        Check the device volume, VLC audio settings and
+        selected audio track.
+      </p>
+
+      <h3>Subtitles Are Not Showing</h3>
+      <p>
+        Confirm that the subtitle track is enabled and
+        the subtitle file uses a supported format.
+      </p>
+
+      <h3>Playback Is Slow</h3>
+      <p>
+        Performance can depend on the device and media file.
+        Check available updates and review hardware decoding
+        settings where supported.
+      </p>
+
+      <h3>VLC Is Not Opening</h3>
+      <p>
+        Restart the device and check whether your installed
+        version is compatible with your operating system.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Privacy and Safety Tips</h2>
+
+      <ul>
+        <li>Download VLC from the official VideoLAN website or your device's official app store.</li>
+        <li>Check the publisher before installing an application.</li>
+        <li>Keep VLC updated when updates are available.</li>
+        <li>Review app permissions and device security settings.</li>
+        <li>Avoid modified installers and suspicious download pages.</li>
+      </ul>
+
+      <p>
+        VideoLAN states that VLC does not include spyware,
+        advertisements or user tracking.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>1. Is VLC Media Player free?</h3>
+        <p>
+          Yes. VLC is free and open-source software.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>2. Who develops VLC Media Player?</h3>
+        <p>
+          VLC is developed and maintained through the
+          VideoLAN project and its community.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>3. Can VLC play MP4 and MKV files?</h3>
+        <p>
+          Yes. VLC supports both MP4 and MKV among many
+          other multimedia formats.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>4. Does VLC support subtitles?</h3>
+        <p>
+          Yes. VLC supports multiple embedded and external
+          subtitle formats.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>5. Is VLC available for Android?</h3>
+        <p>
+          Yes. VideoLAN provides a VLC application for
+          compatible Android devices.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>6. Is VLC available for iPhone?</h3>
+        <p>
+          Yes. VLC is also available for supported iOS devices.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>7. Does VLC require an account?</h3>
+        <p>
+          VLC's normal media playback does not require
+          creating an account.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>8. Where should I download VLC?</h3>
+        <p>
+          Use the official VideoLAN website or your device's
+          official application store.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Final Thoughts</h2>
+
+      <p>
+        VLC Media Player is a versatile multimedia player
+        with broad format support, subtitle controls,
+        audio settings and compatibility across multiple
+        platforms.
+      </p>
+
+      <p>
+        Before installing VLC, users should check their
+        device requirements and use official download sources.
+        Understanding its features and settings can help
+        make everyday media playback easier.
+      </p>
+    </section>
+
+    <section class="section sources">
+      <h2>Official References</h2>
+
+      <ul>
+        <li><a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">VLC Official Website</a></li>
+        <li><a href="https://images.videolan.org/vlc/features.html" target="_blank" rel="noopener noreferrer">VLC Features</a></li>
+        <li><a href="https://docs.videolan.me/vlc-user/en/" target="_blank" rel="noopener noreferrer">VLC User Documentation</a></li>
+        <li><a href="https://images.videolan.org/vlc/download-android.html" target="_blank" rel="noopener noreferrer">VLC for Android</a></li>
+      </ul>
+
+      <p>
+        MovieNova is an independent informational website
+        and is not affiliated with or endorsed by VideoLAN.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 MovieNova. Independent App Information & Guides.</p>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
