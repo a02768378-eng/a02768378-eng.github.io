@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,47 +32,6 @@
     a {
       color: #ff4545;
       text-decoration: none;
-    }
-
-    .topbar {
-      background: #151518;
-      border-bottom: 1px solid #29292d;
-      padding: 15px 6%;
-      text-align: center;
-      color: #aaa;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    header {
-      padding: 22px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      border-bottom: 1px solid #252529;
-    }
-
-    .logo {
-      color: white;
-      font-size: 25px;
-      font-weight: 800;
-    }
-
-    .logo span {
-      color: #ff4242;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 14px;
-    }
-
-    nav a {
-      color: #ddd;
     }
 
     .hero {
@@ -237,21 +195,150 @@
       font-size: 14px;
     }
 
-    footer {
-      background: #141417;
-      border-top: 1px solid #29292d;
-      padding: 30px 6%;
+    /* MovieNova Home-style announcement and header */
+    .announcement {
+      background: #ef233c;
+      color: #fff;
       text-align: center;
-      color: #999;
-      font-size: 14px;
+      padding: 10px 16px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
     }
 
-    @media(max-width: 650px) {
-      header {
+    .site-header {
+      width: min(1180px, 88%);
+      margin: 0 auto;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid #242428;
+      background: #080809;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: #ef233c;
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(239, 35, 60, .2);
+    }
+
+    .brand .red {
+      color: #ff465c;
+    }
+
+    .site-header .nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .site-header .nav a {
+      color: #eee;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* MovieNova Home-style footer */
+    .site-footer {
+      background: #080809;
+      border-top: 1px solid #242428;
+      padding: 30px max(6%, calc((100% - 1180px) / 2));
+      color: #9b9ba5;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr auto;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 22px;
+    }
+
+    .footer-description {
+      color: #9b9ba5;
+      max-width: 430px;
+      font-size: 12px;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .footer-links a {
+      color: #c9c9d0;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #242428;
+      padding-top: 18px;
+    }
+
+    .footer-bottom small {
+      color: #777780;
+      font-size: 11px;
+    }
+
+    @media (max-width: 700px) {
+      .site-header {
+        width: 88%;
+        flex-wrap: wrap;
+      }
+
+      .site-header .nav {
+        gap: 15px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .footer-brand {
         justify-content: center;
       }
 
-      nav {
+      .footer-description {
+        margin: 0 auto;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+    }
+
+    @media(max-width: 650px) {
+      .site-header {
+        justify-content: center;
+      }
+
+      .site-header .nav {
         justify-content: center;
         gap: 13px;
       }
@@ -282,18 +369,19 @@
 
 <body>
 
-  <div class="topbar">
-    MOVIENOVA • APP INFORMATION & GUIDES
+  <div class="announcement">
+    MOVIENOVA • Your guide to entertainment apps
   </div>
 
-  <header>
-    <a class="logo" href="index.html">Movie<span>Nova</span></a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="MovieNova home">
+      <span class="brand-mark">M</span>
+      <span>Movie<span class="red">Nova</span></span>
+    </a>
 
-    <nav>
+    <nav class="nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -414,8 +502,7 @@
 
       </div>
     </section>
-
-    <section class="section">
+        <section class="section">
       <h2>Supported Media Formats</h2>
 
       <p>
@@ -673,10 +760,26 @@
       <h2>Official References</h2>
 
       <ul>
-        <li><a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">VLC Official Website</a></li>
-        <li><a href="https://images.videolan.org/vlc/features.html" target="_blank" rel="noopener noreferrer">VLC Features</a></li>
-        <li><a href="https://docs.videolan.me/vlc-user/en/" target="_blank" rel="noopener noreferrer">VLC User Documentation</a></li>
-        <li><a href="https://images.videolan.org/vlc/download-android.html" target="_blank" rel="noopener noreferrer">VLC for Android</a></li>
+        <li>
+          <a href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer">
+            VLC Official Website
+          </a>
+        </li>
+        <li>
+          <a href="https://images.videolan.org/vlc/features.html" target="_blank" rel="noopener noreferrer">
+            VLC Features
+          </a>
+        </li>
+        <li>
+          <a href="https://docs.videolan.me/vlc-user/en/" target="_blank" rel="noopener noreferrer">
+            VLC User Documentation
+          </a>
+        </li>
+        <li>
+          <a href="https://images.videolan.org/vlc/download-android.html" target="_blank" rel="noopener noreferrer">
+            VLC for Android
+          </a>
+        </li>
       </ul>
 
       <p>
@@ -687,13 +790,28 @@
 
   </main>
 
-  <footer>
-    <p>© 2026 MovieNova. Independent App Information & Guides.</p>
-    <p>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a>
-    </p>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="index.html" aria-label="MovieNova home">
+        <span class="brand-mark">M</span>
+        <span>Movie<span class="red">Nova</span></span>
+      </a>
+
+      <p class="footer-description">
+        Independent app information and guides. Not affiliated with third-party app developers.
+      </p>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="apps.html">Apps</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <small>© 2026 MovieNova. All rights reserved.</small>
+    </div>
   </footer>
 
 </body>
