@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KMPlayer — Features, Formats & Installation Guide | MovieNova</title>
+
+  <meta name="description" content="Explore KMPlayer features, supported media formats, compatibility, installation guidance, and common troubleshooting tips.">
+
+  <meta name="theme-color" content="#0b0b0d">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0d;
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      background: #111114;
+      border-bottom: 1px solid #29292e;
+      padding: 18px 6%;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #e50914;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #d0d0d0;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover,
+    .footer-links a:hover {
+      color: #e50914;
+    }
+
+    .page-container {
+      max-width: 1120px;
+      margin: auto;
+      padding: 35px 22px 70px;
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 22px;
+    }
+
+    .breadcrumb a {
+      color: #e50914;
+    }
+
+    .article-hero {
+      background: linear-gradient(135deg, #19191e, #101013);
+      border: 1px solid #2b2b31;
+      border-radius: 16px;
+      padding: 48px 42px;
+      margin-bottom: 35px;
+    }
+
+    .article-label {
+      display: inline-block;
+      color: #ff454d;
+      background: rgba(229, 9, 20, 0.12);
+      border: 1px solid rgba(229, 9, 20, 0.3);
+      border-radius: 30px;
+      padding: 5px 13px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .article-hero h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.15;
+      margin: 0 0 18px;
+      color: #fff;
+    }
+
+    .article-hero p {
+      max-width: 760px;
+      color: #c6c6c9;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: #999;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    .article-section {
+      background: #121216;
+      border: 1px solid #29292f;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .article-section h2 {
+      color: #fff;
+      font-size: 27px;
+      line-height: 1.3;
+      margin: 0 0 18px;
+    }
+
+    .article-section h2::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 3px;
+      background: #e50914;
+      margin-top: 12px;
+      border-radius: 3px;
+    }
+
+    .article-section h3 {
+      color: #f3f3f3;
+      font-size: 19px;
+      margin: 24px 0 10px;
+    }
+
+    .article-section p,
+    .article-section ul {
+      color: #c5c5ca;
+    }
+
+    .article-section p {
+      margin: 0 0 16px;
+    }
+
+    .article-section ul {
+      padding-left: 22px;
+      margin: 12px 0 18px;
+    }
+
+    .article-section li {
+      margin-bottom: 9px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 22px;
+    }
+
+    .info-card {
+      background: #1a1a20;
+      border: 1px solid #303038;
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .info-card strong {
+      display: block;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .info-card span {
+      color: #b8b8bf;
+      font-size: 14px;
+    }
+
+    .notice {
+      background: #1d1718;
+      border-left: 3px solid #e50914;
+      padding: 16px 18px;
+      border-radius: 7px;
+      color: #d0c7c8;
+      margin-top: 20px;
+    }
+
+    .site-footer {
+      background: #111114;
+      border-top: 1px solid #29292e;
+      padding: 35px 6%;
+      color: #aaa;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .page-container {
+        padding: 25px 15px 50px;
+      }
+
+      .article-hero {
+        padding: 30px 22px;
+      }
+
+      .article-hero p {
+        font-size: 15px;
+      }
+
+      .article-section {
+        padding: 23px 20px;
+      }
+
+      .article-section h2 {
+        font-size: 23px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MovieNova Header -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        Movie<span>Nova</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#guide">Guide</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="page-container">
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      &nbsp; / &nbsp;
+      <span>KMPlayer</span>
+    </div>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+
+      <span class="article-label">App Guide</span>
+
+      <h1>KMPlayer — Features, Supported Formats & Installation Guide</h1>
+
+      <p>
+        Discover KMPlayer, explore its media playback features,
+        supported formats, device compatibility, and general
+        installation guidance in this easy-to-follow guide.
+      </p>
+
+      <div class="article-meta">
+        <span>MovieNova App Guide</span>
+        <span>Updated: November 2026</span>
+        <span>Reading time: 6 minutes</span>
+      </div>
+
+    </section>
+
+    <!-- Overview -->
+    <section class="article-section" id="overview">
+
+      <h2>KMPlayer Overview</h2>
+
+      <p>
+        KMPlayer is a multimedia player designed for playing video
+        and audio content on supported devices. It is known for
+        offering playback controls and media-related features
+        for different types of users.
+      </p>
+
+      <p>
+        The available features and supported formats may vary
+        depending on the platform, app version, device hardware,
+        and operating system.
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <strong>App Category</strong>
+          <span>Multimedia Player</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Primary Use</strong>
+          <span>Video and audio playback</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Platforms</strong>
+          <span>Check current official platform availability</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Compatibility</strong>
+          <span>Depends on device and app version</span>
+        </div>
+
+      </div>
+
+      <div class="notice">
+        <strong>Note:</strong>
+        Always verify the publisher and app requirements
+        through an official source before installing.
+      </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="article-section" id="features">
+
+      <h2>Key Features of KMPlayer</h2>
+
+      <p>
+        KMPlayer provides a range of media playback options.
+        The exact features available depend on the version
+        and platform you use.
+      </p>
+
+      <h3>1. Video Playback</h3>
+
+      <p>
+        KMPlayer is designed to play supported video files.
+        Playback quality and performance can depend on the
+        file encoding and your device's hardware.
+      </p>
+
+      <h3>2. Audio Playback</h3>
+
+      <p>
+        The player can also be used for supported audio files.
+        Available playback options may vary by platform.
+      </p>
+
+      <h3>3. Subtitle Options</h3>
+
+      <p>
+        Subtitle-related options can help viewers follow
+        dialogue in supported media files. Compatibility
+        depends on the subtitle format and app version.
+      </p>
+
+      <h3>4. Playback Controls</h3>
+
+      <p>
+        Media playback controls help users manage video
+        and audio, navigate through files, and adjust
+        their viewing experience.
+      </p>
+
+      <h3>5. Media Format Support</h3>
+
+      <p>
+        KMPlayer supports various media formats, although
+        compatibility may depend on the device, installed
+        version, and available codecs.
+      </p>
+
+    </section>
+        <!-- Supported Media Formats -->
+    <section class="article-section" id="formats">
+
+      <h2>Supported Media Formats</h2>
+
+      <p>
+        KMPlayer supports different types of media files.
+        Actual playback compatibility may depend on the app version,
+        device hardware, and media codecs.
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <strong>Video Formats</strong>
+          <span>Common formats include MP4, MKV, AVI, and MOV.</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Audio Formats</strong>
+          <span>Common audio formats include MP3, AAC, and others.</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Subtitle Support</strong>
+          <span>Available subtitle formats depend on the app version.</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Codec Compatibility</strong>
+          <span>May vary according to file encoding and device support.</span>
+        </div>
+
+      </div>
+
+      <p>
+        If a media file does not play, check its format and codec.
+        Some files may require a compatible version of the player.
+      </p>
+
+    </section>
+
+    <!-- Compatibility -->
+    <section class="article-section" id="compatibility">
+
+      <h2>KMPlayer Compatibility</h2>
+
+      <p>
+        KMPlayer availability and performance depend on the platform,
+        operating system, device specifications, and app version.
+        Check the official publisher's information before installing.
+      </p>
+
+      <h3>Things to Check Before Installation</h3>
+
+      <ul>
+        <li>Confirm that your device meets the current app requirements.</li>
+        <li>Check whether your operating system is supported.</li>
+        <li>Make sure sufficient storage space is available.</li>
+        <li>Review the app's permissions and publisher information.</li>
+        <li>Use the version intended for your device and platform.</li>
+      </ul>
+
+      <div class="notice">
+        App availability and features may differ across platforms
+        and regions. Always check the official listing.
+      </div>
+
+    </section>
+
+    <!-- Installation Guide -->
+    <section class="article-section" id="guide">
+
+      <h2>How to Install KMPlayer</h2>
+
+      <p>
+        For a safer installation, use an official app store
+        or a download source provided by KMPlayer's publisher.
+      </p>
+
+      <h3>For Android Devices</h3>
+
+      <ul>
+        <li>Open the Google Play Store.</li>
+        <li>Search for KMPlayer.</li>
+        <li>Check the app name and publisher details.</li>
+        <li>Review the app description and permissions.</li>
+        <li>Tap Install if the listing is available and compatible.</li>
+        <li>Open the app after installation.</li>
+      </ul>
+
+      <h3>For Desktop Devices</h3>
+
+      <ul>
+        <li>Visit the official KMPlayer website.</li>
+        <li>Find the version designed for your operating system.</li>
+        <li>Review the system requirements.</li>
+        <li>Download the installer from the official source.</li>
+        <li>Follow the installation instructions provided.</li>
+      </ul>
+
+      <div class="notice">
+        Avoid unofficial or modified installation packages.
+        Unknown downloads may contain unwanted software.
+      </div>
+
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="article-section" id="troubleshooting">
+
+      <h2>Common KMPlayer Issues & Solutions</h2>
+
+      <h3>1. Video Is Not Playing</h3>
+
+      <p>
+        Check whether the file is complete and uses a supported
+        format. Try another media file to identify whether the
+        problem is related to the original file.
+      </p>
+
+      <h3>2. No Sound During Playback</h3>
+
+      <p>
+        Check your device's volume settings and confirm that
+        the media file contains an audio track. Audio codec
+        compatibility may also affect playback.
+      </p>
+
+      <h3>3. App Is Not Opening</h3>
+
+      <p>
+        Restart your device and check whether an app update
+        is available. Also make sure sufficient storage space
+        is available.
+      </p>
+
+      <h3>4. Video Playback Is Slow</h3>
+
+      <p>
+        Close unnecessary background apps and check your
+        device's available resources. A lower-resolution
+        media file may also play more smoothly.
+      </p>
+
+      <h3>5. Subtitles Are Not Appearing</h3>
+
+      <p>
+        Check whether subtitles are enabled and whether
+        the subtitle file is supported. Confirm that the
+        subtitle file matches the video.
+      </p>
+
+    </section>
+
+    <!-- FAQs -->
+    <section class="article-section" id="faq">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What is KMPlayer used for?</h3>
+
+      <p>
+        KMPlayer is a multimedia player used to play supported
+        video and audio files on compatible devices.
+      </p>
+
+      <h3>Does KMPlayer support subtitles?</h3>
+
+      <p>
+        KMPlayer provides subtitle-related features.
+        Available formats and options can vary by version.
+      </p>
+
+      <h3>Can KMPlayer play different video formats?</h3>
+
+      <p>
+        It supports various media formats, but playback
+        depends on the file's encoding, device, and app version.
+      </p>
+
+      <h3>Where can I download KMPlayer?</h3>
+
+      <p>
+        Use the official app store or the publisher's
+        official website. Verify the publisher before downloading.
+      </p>
+
+      <h3>Why is KMPlayer not playing a video?</h3>
+
+      <p>
+        The file may be damaged or use an unsupported format
+        or codec. Check the file and try another supported video.
+      </p>
+
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="article-section">
+
+      <h2>Disclaimer</h2>
+
+      <p>
+        MovieNova is an independent app information website
+        and is not affiliated with or endorsed by KMPlayer
+        or its publisher. App features, availability, and
+        requirements may change. Always verify current
+        information through official sources.
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- MovieNova Footer -->
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <a href="index.html" class="logo">
+        Movie<span>Nova</span>
+      </a>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#guide">Guide</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <p>
+        © 2026 MovieNova. Independent app information and guides.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
