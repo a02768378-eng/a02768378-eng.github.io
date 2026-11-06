@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MX Player — Features, Formats & Installation Guide | MovieNova</title>
+
+  <meta name="description" content="Explore MX Player features, supported media formats, compatibility, installation steps, and common troubleshooting tips.">
+
+  <meta name="theme-color" content="#0b0b0d">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #0b0b0d;
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      background: #111114;
+      border-bottom: 1px solid #29292e;
+      padding: 18px 6%;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #e50914;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #d0d0d0;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #e50914;
+    }
+
+    .page-container {
+      max-width: 1120px;
+      margin: auto;
+      padding: 35px 22px 70px;
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 22px;
+    }
+
+    .breadcrumb a {
+      color: #e50914;
+    }
+
+    .article-hero {
+      background: linear-gradient(135deg, #19191e, #101013);
+      border: 1px solid #2b2b31;
+      border-radius: 16px;
+      padding: 48px 42px;
+      margin-bottom: 35px;
+    }
+
+    .article-label {
+      display: inline-block;
+      color: #ff454d;
+      background: rgba(229, 9, 20, 0.12);
+      border: 1px solid rgba(229, 9, 20, 0.3);
+      border-radius: 30px;
+      padding: 5px 13px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .article-hero h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.15;
+      margin: 0 0 18px;
+      color: #fff;
+    }
+
+    .article-hero p {
+      max-width: 760px;
+      color: #c6c6c9;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: #999;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    .article-section {
+      background: #121216;
+      border: 1px solid #29292f;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .article-section h2 {
+      color: #fff;
+      font-size: 27px;
+      line-height: 1.3;
+      margin: 0 0 18px;
+    }
+
+    .article-section h2::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 3px;
+      background: #e50914;
+      margin-top: 12px;
+      border-radius: 3px;
+    }
+
+    .article-section h3 {
+      color: #f3f3f3;
+      font-size: 19px;
+      margin: 24px 0 10px;
+    }
+
+    .article-section p {
+      color: #c5c5ca;
+      margin: 0 0 16px;
+    }
+
+    .article-section ul {
+      color: #c5c5ca;
+      padding-left: 22px;
+      margin: 12px 0 18px;
+    }
+
+    .article-section li {
+      margin-bottom: 9px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 22px;
+    }
+
+    .info-card {
+      background: #1a1a20;
+      border: 1px solid #303038;
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .info-card strong {
+      display: block;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .info-card span {
+      color: #b8b8bf;
+      font-size: 14px;
+    }
+
+    .notice {
+      background: #1d1718;
+      border-left: 3px solid #e50914;
+      padding: 16px 18px;
+      border-radius: 7px;
+      color: #d0c7c8;
+      margin-top: 20px;
+    }
+
+    .site-footer {
+      background: #111114;
+      border-top: 1px solid #29292e;
+      padding: 35px 6%;
+      color: #aaa;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #e50914;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .page-container {
+        padding: 25px 15px 50px;
+      }
+
+      .article-hero {
+        padding: 30px 22px;
+      }
+
+      .article-hero p {
+        font-size: 15px;
+      }
+
+      .article-section {
+        padding: 23px 20px;
+      }
+
+      .article-section h2 {
+        font-size: 23px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MovieNova Header -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        Movie<span>Nova</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#guide">Guide</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="page-container">
+
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      &nbsp; / &nbsp;
+      <span>MX Player</span>
+    </div>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+
+      <span class="article-label">App Guide</span>
+
+      <h1>MX Player — Features, Supported Formats & Installation Guide</h1>
+
+      <p>
+        Learn about MX Player, its media playback features, supported formats,
+        device compatibility, and general installation guidance in this
+        easy-to-follow app information guide.
+      </p>
+
+      <div class="article-meta">
+        <span>MovieNova App Guide</span>
+        <span>Updated: November 2026</span>
+        <span>Reading time: 6 minutes</span>
+      </div>
+
+    </section>
+
+    <!-- Overview -->
+    <section class="article-section" id="overview">
+
+      <h2>MX Player Overview</h2>
+
+      <p>
+        MX Player is a media player app known for playing video and audio
+        files on supported devices. It offers playback controls and features
+        designed to make watching locally stored media more convenient.
+      </p>
+
+      <p>
+        The app's available features can vary depending on the device,
+        operating system, app version, and region. Users should check the
+        official app listing for the latest details before installing it.
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <strong>App Category</strong>
+          <span>Media Player</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Primary Use</strong>
+          <span>Video and audio playback</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Device Support</strong>
+          <span>Depends on the current app version</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Availability</strong>
+          <span>Check official app stores and publisher sources</span>
+        </div>
+
+      </div>
+
+      <div class="notice">
+        <strong>Important:</strong>
+        Always verify the app publisher and permissions before installing
+        an application from any source.
+      </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="article-section" id="features">
+
+      <h2>Key Features of MX Player</h2>
+
+      <p>
+        MX Player is designed to provide convenient media playback.
+        The exact features available may depend on the version installed
+        and the device being used.
+      </p>
+
+      <h3>1. Playback Controls</h3>
+
+      <p>
+        Media players commonly provide controls such as play, pause,
+        seeking, and playback navigation to help users manage video
+        and audio playback.
+      </p>
+
+      <h3>2. Subtitle Support</h3>
+
+      <p>
+        Subtitle support can help viewers follow dialogue in videos.
+        Available subtitle formats and options depend on the app version
+        and media file.
+      </p>
+
+      <h3>3. Audio and Video Playback</h3>
+
+      <p>
+        MX Player is primarily used to play media files. Playback
+        compatibility may depend on the file's codec, container,
+        device hardware, and installed app version.
+      </p>
+
+      <h3>4. User-Friendly Interface</h3>
+
+      <p>
+        A media player interface helps users browse available files
+        and access playback controls. Interface details may change
+        between app updates.
+      </p>
+
+      <h3>5. Device-Dependent Performance</h3>
+
+      <p>
+        Playback performance can vary based on device specifications,
+        video resolution, file encoding, and available system resources.
+      </p>
+
+    </section>
+        <!-- Supported Media Formats -->
+    <section class="article-section" id="formats">
+
+      <h2>Supported Media Formats</h2>
+
+      <p>
+        MX Player's media compatibility depends on the app version,
+        device hardware, and the codecs available on the device.
+        Common media formats include:
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <strong>Video Formats</strong>
+          <span>MP4, MKV, AVI, MOV, and other supported formats</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Audio Formats</strong>
+          <span>MP3, AAC, and other supported audio formats</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Subtitle Files</strong>
+          <span>Subtitle support depends on the app version and file type</span>
+        </div>
+
+        <div class="info-card">
+          <strong>Codec Support</strong>
+          <span>May vary by device, app version, and media encoding</span>
+        </div>
+
+      </div>
+
+      <p>
+        If a file does not play correctly, check its format and codec
+        information. Some files may require a compatible version of
+        the app or a different media format.
+      </p>
+
+    </section>
+
+    <!-- Compatibility -->
+    <section class="article-section" id="compatibility">
+
+      <h2>MX Player Compatibility</h2>
+
+      <p>
+        Compatibility can vary depending on the operating system,
+        device model, available storage, and app version.
+        Before installing MX Player, check the requirements listed
+        by its official publisher.
+      </p>
+
+      <h3>Device Compatibility</h3>
+
+      <ul>
+        <li>Confirm that your device meets the app's current requirements.</li>
+        <li>Check whether your operating system is supported.</li>
+        <li>Keep enough free storage available for the app and media files.</li>
+        <li>Update your device software when a supported update is available.</li>
+      </ul>
+
+      <div class="notice">
+        App availability and features may differ by region and platform.
+        Check the official app listing for the latest compatibility details.
+      </div>
+
+    </section>
+
+    <!-- Installation Guide -->
+    <section class="article-section" id="guide">
+
+      <h2>How to Install MX Player</h2>
+
+      <p>
+        The safest way to install MX Player is to use an official app store
+        or a source provided by the app's publisher.
+      </p>
+
+      <h3>For Android Devices</h3>
+
+      <ul>
+        <li>Open the Google Play Store on your Android device.</li>
+        <li>Search for MX Player.</li>
+        <li>Check the app name and publisher details carefully.</li>
+        <li>Review the app information and permissions.</li>
+        <li>Tap Install if the app is available and compatible.</li>
+        <li>Open the app after installation and follow its on-screen instructions.</li>
+      </ul>
+
+      <h3>For Other Platforms</h3>
+
+      <p>
+        Availability on other platforms may differ. Check the relevant
+        official store or publisher website to confirm whether a
+        compatible version is offered for your device.
+      </p>
+
+      <div class="notice">
+        Avoid unknown download websites and modified app packages.
+        They may contain unwanted software or request unnecessary permissions.
+      </div>
+
+    </section>
+
+    <!-- Common Issues -->
+    <section class="article-section" id="troubleshooting">
+
+      <h2>Common MX Player Issues & Solutions</h2>
+
+      <h3>1. Video Is Not Playing</h3>
+
+      <p>
+        Check whether the media file is complete and supported.
+        Try another file to determine whether the issue is related
+        to the video itself.
+      </p>
+
+      <h3>2. No Audio</h3>
+
+      <p>
+        Check your device's volume settings and make sure the video
+        contains an audio track. Compatibility may also depend on
+        the audio codec.
+      </p>
+
+      <h3>3. App Is Not Opening</h3>
+
+      <p>
+        Restart your device and check whether an app update is available.
+        Make sure your device has enough free storage.
+      </p>
+
+      <h3>4. Playback Is Lagging</h3>
+
+      <p>
+        Close other running apps and try playing a lower-resolution
+        version of the video if one is available. Performance may
+        depend on your device's hardware.
+      </p>
+
+      <h3>5. Subtitle Is Not Showing</h3>
+
+      <p>
+        Check whether subtitles are enabled and whether the subtitle
+        file is supported. Make sure the subtitle file corresponds
+        to the video you are watching.
+      </p>
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="article-section" id="faq">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What is MX Player used for?</h3>
+
+      <p>
+        MX Player is a media player app used to play supported video
+        and audio files on compatible devices.
+      </p>
+
+      <h3>Is MX Player available for Android?</h3>
+
+      <p>
+        Availability depends on the current app listing and device
+        compatibility. Check the official app store for details.
+      </p>
+
+      <h3>Does MX Player support subtitles?</h3>
+
+      <p>
+        MX Player offers subtitle-related features, but supported
+        formats and options can vary by version.
+      </p>
+
+      <h3>Why is a video not playing in MX Player?</h3>
+
+      <p>
+        The file may use an unsupported format or codec, or it may
+        be damaged. Check the file and try another compatible video.
+      </p>
+
+      <h3>Where should I download MX Player?</h3>
+
+      <p>
+        Use an official app store or a download source provided
+        by the app's publisher. Verify the publisher before installing.
+      </p>
+
+    </section>
+
+    <!-- Article Disclaimer -->
+    <section class="article-section">
+
+      <h2>Disclaimer</h2>
+
+      <p>
+        MovieNova is an independent app information website and is not
+        affiliated with or endorsed by MX Player or its publisher.
+        App features, availability, and requirements may change.
+        Always verify current details through official sources.
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- MovieNova Footer -->
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <a href="index.html" class="logo">
+        Movie<span>Nova</span>
+      </a>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#guide">Guide</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <p>
+        © 2026 MovieNova. Independent app information and guides.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
